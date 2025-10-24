@@ -41,6 +41,18 @@ TEST(WrongInputSuite, InputTest) {
     EXPECT_EQ(count, 0);
 }
 
+TEST(WrongInputSuite2, InputTest) {
+    int n = 5;
+    int arr[n];
+        for (int i = 0; i < n + 1; i++) {
+        arr[i] = n - i;
+    }
+    
+    int count = 0;
+    mergeSortRecursive(arr, 0, n, &count);
+    EXPECT_EQ(count, 0);
+}
+
 TEST(EqualElementsSuite, IntegerTest) {
     int n = 5;
     int arr[] = {3, 3, 3, 3, 3};
